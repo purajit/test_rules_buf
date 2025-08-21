@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+package protos.b;
+
+option go_package = "github.com/purajit/test_rules_buf/protos/b";
+
+message M {
+  string s = 1;
+}

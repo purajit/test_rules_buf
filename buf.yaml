@@ -1,0 +1,15 @@
+version: v2
+deps:
+  - buf.build/googleapis/googleapis
+
+modules:
+  - path: ./
+    includes:
+      - protos
+lint:
+  use:
+    - BASIC
+  ignore_only:
+    PACKAGE_DIRECTORY_MATCH:
+      - protos/c/c.proto
+      - protos/d/d.proto
