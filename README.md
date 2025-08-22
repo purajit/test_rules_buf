@@ -1,3 +1,5 @@
+Note that Bazel's run doesn't catch any of the `Multiple directories ... contain files with package` issues, and only catches `Files in package ... have multiple values ... for option "go_package" and all values must be equal` when the files are in the same target. This is expected based on how Bazel and targets work, but ultimately provides incorrect results.
+
 ``` sh
 > buf lint .
 protos/a/a.proto:3:1:Multiple directories "protos/a,protos/c" contain files with package "protos.a".
